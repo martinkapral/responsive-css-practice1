@@ -1,0 +1,234 @@
+:root {
+  --clr-orange: hsl(31, 77%, 52%);
+  --clr-darkcyan: hsl(184, 100%, 22%);
+  --clr-verydarkcyan: hsl(179, 100%, 13%);
+
+  --clr-neutral1: hsla(0, 0%, 100%, 0.75);
+  --clr-neutral2: hsl(0, 0%, 95%);
+
+  --ff-accent: "Big Shoulders Display", sans-serif;
+  --ff-base: "Lexend Deca", sans-serif;
+
+  --fw-regular: 500;
+  --fw-bold: 700;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+
+body {
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+/* MY CSS */
+
+body {
+  background-color: var(--clr-neutral2);
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.main_box {
+  display: flex;
+  min-height: 500px;
+
+  max-width: 900px;
+  min-width: 900px;
+}
+
+.sedans_box {
+  background-color: var(--clr-orange);
+
+  padding: 40px;
+}
+
+.suvs_box {
+  background-color: var(--clr-darkcyan);
+
+  padding: 40px;
+}
+
+.luxury_box {
+  background-color: var(--clr-verydarkcyan);
+
+  padding: 40px;
+}
+
+.header {
+  text-transform: uppercase;
+  font-family: var(--ff-accent);
+  font-size: 45px;
+  color: var(--clr-neutral2);
+}
+
+.info-text {
+  font-family: var(--ff-base);
+  color: var(--clr-neutral1);
+  margin-top: 20px;
+}
+
+main {
+  margin: auto;
+
+  display: flex;
+
+  border-radius: 0.5rem;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 5px 5px 20px gray;
+}
+
+.icon {
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: var(--clr-neutral2);
+  font-family: var(--ff-base);
+  font-weight: 700;
+  border: none;
+  border-radius: 100px;
+  padding: 10px 30px;
+  margin-top: 100px;
+  border: solid var(--clr-neutral2);
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.button1 {
+  color: var(--clr-orange);
+}
+
+.button1:hover {
+  background-color: var(--clr-orange);
+  color: var(--clr-neutral2);
+  transition: ease 0.3s;
+}
+
+.button2 {
+  color: var(--clr-darkcyan);
+}
+
+.button2:hover {
+  background-color: var(--clr-darkcyan);
+  color: var(--clr-neutral2);
+  transition: ease 0.3s;
+}
+
+.button3 {
+  color: var(--clr-verydarkcyan);
+}
+
+.button3:hover {
+  background-color: var(--clr-verydarkcyan);
+  color: var(--clr-neutral2);
+  transition: ease 0.3s;
+}
+
+@media (max-width: 900px) {
+  .main_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 225px;
+    padding-right: 225px;
+  }
+
+  main {
+    max-width: 450px;
+    margin: auto;
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 500px) {
+  .main_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 300px;
+    padding-right: 300px;
+  }
+
+  main {
+    max-width: 275px;
+    margin: auto;
+    margin-top: 50px;
+    box-shadow: 2px -2px 20px gray;
+  }
+
+  button {
+    margin-top: 25px;
+  }
+
+  .info-text {
+    margin-top: 10px;
+  }
+}
