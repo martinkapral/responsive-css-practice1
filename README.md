@@ -1,1 +1,1 @@
-# responsive-css-practice1
+https://martinkapral.github.io/responsive-css-practice1/
